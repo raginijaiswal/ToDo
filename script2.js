@@ -20,7 +20,7 @@ function createListElement(){
     input.value="";
     var del = document.createElement("button");
     del.className="buttonLi";
-    del.appendChild(document.createTextNode("delete!"))
+    del.appendChild(document.createTextNode("Delete!"))
     li.appendChild(del);
     del.onclick=removeParent;
     // for(i=0; i<ul.children.length;i++){

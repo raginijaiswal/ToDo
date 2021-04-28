@@ -31,6 +31,9 @@ h1 {
 }
 
 li {
+    /* display: grid;
+    grid-gap: 20px;
+    grid-column: 1 / span 2; */
 	font-family: "Lucida Console", "Courier New", monospace;
     cursor: pointer;
     color: rgba(0,0,0,.5);
@@ -54,8 +57,8 @@ button{
 }
 
 .buttonLi{
-    padding: 1em 2em;
-    margin: 0.5em;
+    padding: 0.5em 1em;
+    margin: 0.3em;
     font: 'Raleway', sans-serif;
     border: none;
     border-radius: 10% 10%;

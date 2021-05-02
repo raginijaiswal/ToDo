@@ -29,11 +29,15 @@ h1 {
     width: 100%;
 }
 ul{
+    
     margin: auto;
     padding: 0;
     width: fit-content;
+    max-width: 400px;
+    
 }
 li {
+    display: block;
 	font-family: "Lucida Console", "Courier New", monospace;
     cursor: pointer;
     color: rgba(0,0,0,.5);
@@ -42,6 +46,11 @@ li {
     text-transform: none;
     letter-spacing: 0.01em;
 
+}
+
+
+div{
+    margin-top: 2.5em;
 }
 
 /* sexy sky blue gradient //linear-gradient(to right, rgb(52, 120, 177), rgb(17, 132, 137)); */
@@ -56,10 +65,10 @@ button{
     text-decoration: none;
 }
 
+
 .buttonLi{
     padding: 0.5em 1em;
     margin: 0.3em;
-    margin-left: auto;
     font: 'Raleway', sans-serif;
     border: none;
     border-radius: 10% 10%;

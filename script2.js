@@ -7,11 +7,13 @@ var delAll = document.createElement("button");
 delAll.appendChild(document.createTextNode("Delete All"));
 div.appendChild(delAll);
 delAll.onclick=EmptyList;
+delAll.style.marginTop = "3em";
 
 
 function inputLength() {
     return input.value.length;
 }
+
 
 function createListElement(){
     var li= document.createElement("li");
@@ -59,6 +61,7 @@ ul.onclick=function(event){
 	var target=event.target;
 	target.classList.toggle("done");
 }
+
 
 function addListAfterClick(){
     if(inputLength() > 0) {

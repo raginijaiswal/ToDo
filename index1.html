@@ -16,3 +16,39 @@
     </header>
 </body>
 </html>
+
+function answer(arr,l){
+    var arr1=[];
+    var result=[]
+    var sortArr=(arr,l)=>{
+        for(i=0; i<l; i++){
+            for(j=i; j<l;j++){
+                if(arr[i]>arr[j]){
+                    var a = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = a;
+                }
+            }
+            
+        }
+    }
+
+    for (let i = 0; i <= sortArr.length; i++) {
+        if ((i === 0) || (sortArr[i] === sortArr[i - 1])){
+            // add first element or matching element to tmp array
+            arr1.push(sortArr[i]);
+        } else {
+            // add tmp array to result array
+            result.push(arr1);
+            // clear the tmp array
+            arr1 = [];
+            // add new value to tmp array
+            arr1.push(sortArr[i]);
+        }
+    }
+    return result;
+    
+}
+var array =[5,2,3,2,1,1,5,5,3,9,9,6,22,7,8,3,9];
+var l= array.length;
+answer(array,l);

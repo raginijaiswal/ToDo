@@ -48,6 +48,12 @@ li {
 
 }
 
+.time{
+    display: block;
+    color: rgb(255, 255, 255, 0.8);
+    padding: 2px;
+    border-color: rgba(0,0,0,.5);
+}
 
 div{
     margin-top: 2.5em;

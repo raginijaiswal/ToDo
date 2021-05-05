@@ -1,5 +1,6 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("username");
+var time = document.getElementById("Time");
 var ul = document.querySelector("ul");
 var div = document.querySelector("div");
 var item = document.getElementsByTagName("li")
@@ -8,6 +9,7 @@ delAll.appendChild(document.createTextNode("Delete All"));
 div.appendChild(delAll);
 delAll.onclick=EmptyList;
 delAll.style.marginTop = "3em";
+
 
 
 function inputLength() {
@@ -20,6 +22,13 @@ function createListElement(){
     li.appendChild(document.createTextNode(input.value));
     ul.appendChild(li);
     input.value="";
+
+    var ti = document.createElement("ti");
+    ti.appendChild(document.createTextNode(time.value));
+    ti.className = "time";
+    li.appendChild(ti);
+    time.value="";
+
     var del = document.createElement("button");
     del.className="buttonLi";
     del.appendChild(document.createTextNode("Delete!"))
@@ -31,6 +40,8 @@ function createListElement(){
     //     li.appendChild(del);
     // }
 }
+
+
 
 for(i=0;i<item.length;i++){
     removeItem(i);
@@ -70,7 +81,7 @@ function addListAfterClick(){
 }
 
 function addListAfterKeypress(event) {
-	if (inputLength() > 0 && event.keyCode === 13) {
+	if ((inputLength() > 0 && event.keyCode === 13)) {
 		createListElement();
 	}
 }
@@ -78,3 +89,4 @@ function addListAfterKeypress(event) {
 button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
+time.addEventListener("keypress", addListAfterKeypress);
